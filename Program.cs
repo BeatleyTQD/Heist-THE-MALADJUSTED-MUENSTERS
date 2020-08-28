@@ -9,8 +9,11 @@ namespace heist
         static void Main(string[] args)
         {
             Team myTeam = new Team();
-
             bool nameCheck = true;
+            Console.WriteLine("Choose your difficulty!");
+            string initialBankDifficulty = Console.ReadLine();
+            int initialBankDifficultyNum = int.Parse(initialBankDifficulty);
+
             Console.WriteLine("Plan Your Heist!");
             Console.WriteLine("-----------------");
 
@@ -52,10 +55,10 @@ namespace heist
             for (int i = 0; i < trialRunsNum; i++)
             {
                 int Luck = new Random().Next(-11, 11);
-                int initialBankDifficulty = 100;
-                int bankDifficulty = initialBankDifficulty + Luck;
+                int bankDifficulty = initialBankDifficultyNum + Luck;
                 myTeam.TeamSkillCheck(bankDifficulty);
             }
+            myTeam.DisplayWinRate();
 
         }
 

@@ -7,6 +7,8 @@ namespace heist
     public class Team
     {
         public List<TeamMember> teamMembers = new List<TeamMember>();
+        public int successes { get; set; }
+        public int failures { get; set; }
 
         public void AddMember(TeamMember newMember)
         {
@@ -30,11 +32,18 @@ namespace heist
             if (sumSkill >= bankDifficulty)
             {
                 Console.WriteLine("Success");
+                successes++;
             }
             else
             {
                 Console.WriteLine("Failure");
+                failures++;
             }
+        }
+
+        public void DisplayWinRate()
+        {
+            Console.WriteLine($"{successes} {failures}");
         }
     }
 }
