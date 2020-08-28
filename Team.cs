@@ -13,11 +13,12 @@ namespace heist
         }
         public void PrintMembers()
         {
+            Console.WriteLine($"\nTEAM:");
             foreach (TeamMember n in _teamMembers)
             {
-                Console.WriteLine(n.Name);
-                Console.WriteLine(n.SkillLevel);
-                Console.WriteLine(n.CourageFactor);
+                Console.WriteLine($"Name:    {n.Name}");
+                Console.WriteLine($"Skill:   {n.SkillLevel}");
+                Console.WriteLine($"Courage: {n.CourageFactor}\n");
             }
         }
     }
