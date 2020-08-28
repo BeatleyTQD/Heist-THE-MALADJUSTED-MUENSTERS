@@ -10,11 +10,14 @@ namespace heist
         {
             Team myTeam = new Team();
 
-            int bankDifficulty = 100;
+            int initialBankDifficulty = 100;
+            int Luck = new Random().Next(-11, 11);
+            int bankDifficulty = initialBankDifficulty + Luck;
 
             bool nameCheck = true;
             Console.WriteLine("Plan Your Heist!");
             Console.WriteLine("-----------------");
+
             while (nameCheck)
             {
 
