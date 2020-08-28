@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace heist
 {
@@ -7,6 +9,7 @@ namespace heist
         static void Main(string[] args)
         {
             Team myTeam = new Team();
+
             int bankDifficulty = 100;
 
             bool nameCheck = true;
@@ -42,7 +45,9 @@ namespace heist
                     myTeam.AddMember(aNewMember);
                 }
             }
-            myTeam.
+
+            myTeam.TeamSkillCheck(bankDifficulty);
+
             // myTeam.PrintMembers();
 
         }
