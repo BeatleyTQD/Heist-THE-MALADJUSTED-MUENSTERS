@@ -11,6 +11,14 @@ namespace heist
         {
             _teamMembers.Add(newMember);
         }
-
+        public void PrintMembers()
+        {
+            foreach (TeamMember n in _teamMembers)
+            {
+                Console.WriteLine(n.Name);
+                Console.WriteLine(n.SkillLevel);
+                Console.WriteLine(n.CourageFactor);
+            }
+        }
     }
 }
