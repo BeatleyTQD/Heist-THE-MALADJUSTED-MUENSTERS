@@ -18,7 +18,7 @@ namespace heist
             while (nameCheck)
             {
 
-                Console.Write("Member name:");
+                Console.Write("Member name: ");
                 string name = Console.ReadLine();
                 if (name == "")
                 {
@@ -26,11 +26,11 @@ namespace heist
                 }
                 else
                 {
-                    Console.Write("Skill Level?:");
+                    Console.Write("Skill Level?: ");
                     string skillLevel = Console.ReadLine();
                     int skillLevelNum = int.Parse(skillLevel);
 
-                    Console.Write("What is your Courage Level 0 - 2.0?:");
+                    Console.Write("What is your Courage Level 0 - 2.0?: ");
                     string courageFactor = Console.ReadLine();
                     double courageFactorNum = double.Parse(courageFactor);
 
