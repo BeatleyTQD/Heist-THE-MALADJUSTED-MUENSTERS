@@ -25,6 +25,8 @@ namespace heist
         public void TeamSkillCheck(int bankDifficulty)
         {
             int sumSkill = teamMembers.Sum(teamMember => teamMember.SkillLevel);
+            Console.WriteLine($"Your Team's Skill Level: {sumSkill}");
+            Console.WriteLine($"Bank Difficulty: {bankDifficulty}");
             if (sumSkill >= bankDifficulty)
             {
                 Console.WriteLine("Success");
