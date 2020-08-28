@@ -10,10 +10,6 @@ namespace heist
         {
             Team myTeam = new Team();
 
-            int initialBankDifficulty = 100;
-            int Luck = new Random().Next(-11, 11);
-            int bankDifficulty = initialBankDifficulty + Luck;
-
             bool nameCheck = true;
             Console.WriteLine("Plan Your Heist!");
             Console.WriteLine("-----------------");
@@ -49,9 +45,17 @@ namespace heist
                 }
             }
 
-            myTeam.TeamSkillCheck(bankDifficulty);
+            Console.WriteLine("How many times would you like to run this scenario?");
+            string trialRuns = Console.ReadLine();
+            int trialRunsNum = int.Parse(trialRuns);
 
-            // myTeam.PrintMembers();
+            for (int i = 0; i < trialRunsNum; i++)
+            {
+                int Luck = new Random().Next(-11, 11);
+                int initialBankDifficulty = 100;
+                int bankDifficulty = initialBankDifficulty + Luck;
+                myTeam.TeamSkillCheck(bankDifficulty);
+            }
 
         }
 
