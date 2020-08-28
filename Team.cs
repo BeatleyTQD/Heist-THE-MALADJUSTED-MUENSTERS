@@ -27,7 +27,7 @@ namespace heist
         public void TeamSkillCheck(int bankDifficulty)
         {
             int sumSkill = teamMembers.Sum(teamMember => teamMember.SkillLevel);
-            Console.WriteLine($"Your Team's Skill Level: {sumSkill}");
+            Console.WriteLine($"\nYour Team's Skill Level: {sumSkill}");
             Console.WriteLine($"Bank Difficulty: {bankDifficulty}");
             if (sumSkill >= bankDifficulty)
             {
@@ -43,7 +43,7 @@ namespace heist
 
         public void DisplayWinRate()
         {
-            Console.WriteLine($"{successes} {failures}");
+            Console.WriteLine($"Successes: {successes} \nFailures: {failures}\n");
         }
     }
 }

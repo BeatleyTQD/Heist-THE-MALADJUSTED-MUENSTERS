@@ -10,7 +10,7 @@ namespace heist
         {
             Team myTeam = new Team();
             bool nameCheck = true;
-            Console.WriteLine("Choose your difficulty!");
+            Console.Write("Choose your difficulty: ");
             string initialBankDifficulty = Console.ReadLine();
             int initialBankDifficultyNum = int.Parse(initialBankDifficulty);
 
@@ -33,14 +33,19 @@ namespace heist
                     int skillLevelNum = int.Parse(skillLevel);
 
                     Console.Write("What is your Courage Level 0 - 2.0?: ");
-                    string courageFactor = Console.ReadLine();
-                    double courageFactorNum = double.Parse(courageFactor);
+                    double courageFactor = double.Parse(Console.ReadLine());
+
+                    if (courageFactor > 2 || courageFactor < 0)
+                    {
+                        Console.Write("Courage Level must be 0 - 2.0?: ");
+                        courageFactor = double.Parse(Console.ReadLine());
+                    }
 
                     TeamMember aNewMember = new TeamMember()
                     {
                         Name = name,
                         SkillLevel = skillLevelNum,
-                        CourageFactor = courageFactorNum
+                        CourageFactor = courageFactor
                     };
                     Console.WriteLine();
 
@@ -48,7 +53,7 @@ namespace heist
                 }
             }
 
-            Console.WriteLine("How many times would you like to run this scenario?");
+            Console.Write("How many times would you like to run this scenario? ");
             string trialRuns = Console.ReadLine();
             int trialRunsNum = int.Parse(trialRuns);
 
@@ -58,7 +63,11 @@ namespace heist
                 int bankDifficulty = initialBankDifficultyNum + Luck;
                 myTeam.TeamSkillCheck(bankDifficulty);
             }
+            Console.WriteLine();
             myTeam.DisplayWinRate();
+            // myTeam.PrintMembers();
+
+
 
         }
 
