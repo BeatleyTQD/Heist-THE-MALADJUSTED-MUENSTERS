@@ -7,6 +7,8 @@ namespace heist
         static void Main(string[] args)
         {
             Team myTeam = new Team();
+            int bankDifficulty = 100;
+
             bool nameCheck = true;
             Console.WriteLine("Plan Your Heist!");
             Console.WriteLine("-----------------");
@@ -40,8 +42,8 @@ namespace heist
                     myTeam.AddMember(aNewMember);
                 }
             }
-            myTeam.PrintMembers();
-            // Console.WriteLine($"{aNewMember.Name}\n{aNewMember.SkillLevel}\n{aNewMember.CourageFactor}");
+            myTeam.
+            // myTeam.PrintMembers();
 
         }
 
